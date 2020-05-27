@@ -7,7 +7,20 @@ namespace MagicDestroyers.Armors.Cloth
 
         private int armorPoints;
 
-        public int ArmorPoints { get; set; }
+        public int ArmorPoints 
+        { 
+            get
+            {
+                return armorPoints;
+            }
+            set 
+            {
+                if (value >= 1)
+                {
+                    armorPoints = value;
+                }
+            }
+        }
 
 
         public ClothRobe()

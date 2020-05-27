@@ -33,7 +33,7 @@ namespace MagicDestroyers.Characters.Melees
             {
                 return damage;
             }
-            private set
+            set
             {
                 damage = value;
             }
@@ -101,9 +101,9 @@ namespace MagicDestroyers.Characters.Melees
                 }
                 else
                 {
-                    Console.WriteLine($"Value must be set: 1 -100. ");
+                    throw new ArgumentOutOfRangeException(string.Empty, "Value must be set: 1 -100.");
+                    //Console.WriteLine($"Value must be set: 1 -100. ");
                     level = 1;
-                    // Console.WriteLine($"Default value = {level}");
                 }
             }
         }
@@ -148,27 +148,29 @@ namespace MagicDestroyers.Characters.Melees
             Name = name;
         }
 
-     #endregion
+        #endregion
 
      #region methods
 
-        //  Offensive
+        //  Methods: Offensive
+
         public void Strike()
         {
-
+            throw new NotImplementedException("Not implemented method.");
         }
         public void Execute()
         {
-
+            throw new NotImplementedException("Not implemented method.");
         }
 
-        //  Defensive
+        //  Methods: Defensive
+
         public void SkinHarden()
         {
-
+            throw new NotImplementedException("Not implemented method.");
         }
 
-
+        //
         public void Attack(warriorPlay enemy)
             {
                 enemy.HealthPoints -= Damage;
@@ -185,8 +187,5 @@ namespace MagicDestroyers.Characters.Melees
         }
 
     }
-
-
-    //}
 
 }

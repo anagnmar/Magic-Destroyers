@@ -47,12 +47,13 @@
     <Compile Include="Armors\Cloth\ClothRobe.cs" />
     <Compile Include="Armors\Leather\LeatherVest.cs" />
     <Compile Include="Characters\Melees\Assassin.cs" />
-    <Compile Include="Characters\Melees\warriorPlay.cs" />
+    <Compile Include="warriorPlay.cs" />
     <Compile Include="Characters\Spellcasters\Druid.cs" />
     <Compile Include="Characters\Melees\Knight.cs" />
     <Compile Include="Characters\Spellcasters\Mage.cs" />
     <Compile Include="Characters\Spellcasters\Necromancer.cs" />
     <Compile Include="EntryPoint.cs" />
+    <Compile Include="Enumerations\Faction.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Characters\Melees\Warrior.cs" />
     <Compile Include="Weapons\Sharp\Axe.cs" />

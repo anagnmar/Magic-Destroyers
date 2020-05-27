@@ -2,10 +2,12 @@
 using MagicDestroyers.Armors.Leather;
 using MagicDestroyers.Weapons.Sharp;
 
+
 namespace MagicDestroyers.Characters.Melees
 {
     public class Assassin
     {
+
      #region fields
         //  fields
         private int faction;
@@ -20,6 +22,7 @@ namespace MagicDestroyers.Characters.Melees
      #endregion
 
      #region properties
+
         //  properties
         public int Faction
         {
@@ -81,7 +84,6 @@ namespace MagicDestroyers.Characters.Melees
                 level = value;
             }
         }
-
         public LeatherVest BodyArmor
         {
             get
@@ -106,29 +108,53 @@ namespace MagicDestroyers.Characters.Melees
         }
         #endregion
 
-        public Assassin()
-        {
+     #region  Constructors
 
+        public Assassin()
+            : this("Assassin", 1)
+        {
         }
 
-     #region methods
-        //  Methods  
+        public Assassin(string name, int level)
+            : this(name, level, 10)
+        {
+        }
 
-        //  Offensive
+        public Assassin(string name, int level, int abilityPoints)
+        {
+            this.Name = name;
+            this.Level = level;
+            this.AbilityPoints = abilityPoints;
+            this.HealthPoints = 100;
+
+            //this.Faction = "Melee";
+
+            this.BodyArmor = new LeatherVest();
+            this.Weapon = new Sword();
+
+            //this.Damage = damage;
+        }
+        #endregion
+
+        #region methods
+
+        //  Methods: Offensive
+
         public void Raze()
         {
-
+            throw new NotImplementedException("Not implemented method.");
         }
         public void Bleed()
         {
-
+            throw new NotImplementedException("Not implemented method.");
         }
-        //  Defensive
+
+        //  Methods: Defensive
+
         public void Survival()
         {
-
+            throw new NotImplementedException("Not implemented method.");
         }
-
 
      #endregion
 

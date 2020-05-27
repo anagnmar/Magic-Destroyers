@@ -1,11 +1,10 @@
 ﻿using System;
 using MagicDestroyers.Armors.Mail;
 using MagicDestroyers.Weapons.Sharp;
-
+using MagicDestroyers.Enumerations;
 
 namespace MagicDestroyers.Characters.Melees
 {
-
     public class Warrior
     {
      #region fields
@@ -16,7 +15,7 @@ namespace MagicDestroyers.Characters.Melees
         private int healthPoints;
 
         private int abilityPoints;
-        private int faction;
+        private Faction faction;
         private int level;
 
         private Chainlink bodyArmor;
@@ -62,7 +61,7 @@ namespace MagicDestroyers.Characters.Melees
             }
         }
 
-        public int Faction 
+        public Faction Faction 
         {
             get
             {
@@ -127,38 +126,54 @@ namespace MagicDestroyers.Characters.Melees
      #region  Constructors
 
         public Warrior()
+            : this("Warrior", 1)
         {
-
         }
 
-        public Warrior(int damage, int healthPoints, string name)
+        public Warrior(string name, int level)
+            : this(name, level, 10)
         {
-            Damage = damage;
-            HealthPoints = healthPoints;
-            Name = name;
+            //this.Damage = damage;
         }
 
+        public Warrior(string name, int level, int abilityPoints)
+        {
+            this.Name = name;
+            this.Level = level;
+            this.AbilityPoints = abilityPoints;
+            this.HealthPoints = 100;
 
-     #endregion
+            //this.Faction = "Melee";
 
-     #region methods
+            this.BodyArmor = new Chainlink();
+            this.Weapon = new Axe();
 
-        //  Offensive
+            //this.Damage = damage;
+        }
+
+        #endregion
+
+        #region methods
+
+        //  Methods: Offensive
+
         public void Strike()
         {
-
+            throw new NotImplementedException("Not implemented method.");
         }
         public void Execute()
         {
-
+            throw new NotImplementedException("Not implemented method.");
         }
 
-        //  Defensive
+        //  Methods: Defensive
+
         public void SkinHarden()
         {
-
+            throw new NotImplementedException("Not implemented method.");
         }
 
+        //
         public void Attack(Warrior enemy)
         {
             enemy.HealthPoints -= Damage;

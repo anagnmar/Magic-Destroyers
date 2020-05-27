@@ -32,31 +32,56 @@ namespace MagicDestroyers.Characters.Spellcasters
         public Staff Weapon { get; set; }
         #endregion
 
-        public Druid()
-        {
+        #region  Constructors
 
+        public Druid()
+            : this("Druid", 1)
+        {
         }
 
-     #region methods
-        //  Methods  
+        public Druid(string name, int level)
+            : this(name, level, 10)
+        {
+            //this.Damage = damage;
+        }
 
-        //  Offensive
+        public Druid(string name, int level, int abilityPoints)
+        {
+            this.Name = name;
+            this.Level = level;
+            this.AbilityPoints = abilityPoints;
+            this.HealthPoints = 100;
+
+            //this.Faction = "Spellcasters";
+
+            this.BodyArmor = new LeatherVest();
+            this.Weapon = new Staff();
+
+            //this.Damage = damage;
+        }
+
+        #endregion
+
+        #region methods
+
+        //  Methods: Offensive
+
         public void Moonfire()
         {
-
+            throw new NotImplementedException("Not implemented method.");
         }
         public void Starburst()
         {
-
+            throw new NotImplementedException("Not implemented method.");
         }
-        //  Defensive
+
+        //  Methods: Defensive
         public void OneWithTheNature()
         {
-
+            throw new NotImplementedException("Not implemented method.");
         }
 
-
-     #endregion
+        #endregion
 
     }
 

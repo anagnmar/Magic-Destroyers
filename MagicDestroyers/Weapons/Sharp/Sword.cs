@@ -9,6 +9,9 @@ namespace MagicDestroyers.Weapons.Sharp
 
         public int Damage { get; set; }
 
+
+     //  methods
+
         public Sword()
         {
 

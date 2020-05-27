@@ -1,7 +1,7 @@
 ﻿using System;
 using MagicDestroyers.Armors.Mail;
-using MagicDestroyers.Weapons.Blunt;
 using MagicDestroyers.Weapons.Sharp;
+using MagicDestroyers.Weapons.Blunt;
 
 namespace MagicDestroyers.Characters.Melees
 {
@@ -20,22 +20,22 @@ namespace MagicDestroyers.Characters.Melees
         private Axe weapon;
         #endregion
 
-        #region properties
+     #region properties
         //  properties
-        //public int Faction
-        //{
-        //    get
-        //    {
-        //        return faction;
-        //    }
-        //    set
-        //    {
-        //        faction = value;
-        //    }
-        //}
 
-     // OR  sorter way to  expand  properties ...
-     // public int Faction { get => faction; set => faction = value; }
+        public int Faction
+        {
+            get
+            {
+                return faction;
+            }
+            set
+            {
+                faction = value;
+            }
+        }
+        // OR  sorter way to  expand  properties ...
+        // public int Faction { get => faction; set => faction = value; }
 
         public string Name
         {
@@ -107,29 +107,52 @@ namespace MagicDestroyers.Characters.Melees
         }
         #endregion
 
+     #region  Constructors
         public Knight()
+            : this("Knight", 1)
         {
-
         }
 
-     #region methods
-        //  Methods  
+        public Knight(string name, int level)
+            : this(name, level, 10)
+        {
+        }
 
-        //  Offensive
+        public Knight(string name, int level, int abilityPoints)
+        {
+            this.Name = name;
+            this.Level = level;
+            this.AbilityPoints = abilityPoints;
+            this.HealthPoints = 100;
+
+            //this.Faction = "Melee";
+
+            this.BodyArmor = new Chainlink();
+            this.Weapon = new Axe();
+
+            //this.Damage = damage;
+        }
+        #endregion
+
+        #region methods
+
+        //  Methods: Offensive
+
         public void Holyblow()
         {
-
+            throw new NotImplementedException("Not implemented method.");
         }
         public void PurifySoul()
         {
-
+            throw new NotImplementedException("Not implemented method.");
         }
-        //  Defensive
+
+        //  Methods: Defensive
+
         public void RighteousWings()
         {
-
+            throw new NotImplementedException("Not implemented method.");
         }
-
 
      #endregion
 

@@ -9,14 +9,17 @@ namespace MagicDestroyers.Weapons.Blunt
 
         public int Damage { get; set; }
 
+
+     //  methods
+
         public Staff()
         {
-
+            throw new NotImplementedException("Not implemented method.");
         }
 
         public void Empower()
         {
-
+            throw new NotImplementedException("Not implemented method.");
         }
 
     }
